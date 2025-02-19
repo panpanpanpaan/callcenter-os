@@ -35,6 +35,7 @@ modules:
         - org.mozilla.firefox
         - org.gnome.Loupe
         - com.github.jkotra.eovpn
+        - com.hoptodesk.HopToDesk
       remove:
         - org.gnome.eog
     user: {} # Also add Flathub user repo, but no user packages
