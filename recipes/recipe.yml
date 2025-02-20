@@ -1,7 +1,7 @@
 ---
 name: callcenter-os
 description: This is my personal OS image.
-base-image: quay.io/fedora-ostree-desktops/base-atomic
+base-image: ghcr.io/aguslr/bluevanilla
 image-version: 41
 modules:
   - type: files
@@ -14,32 +14,20 @@ modules:
     install:
       - micro
       - starship
-      - distrobox
-      - toolbox
-      - just
-      - podman
     remove:
       - firefox
       - firefox-langpacks
-      - fedora-logos
-      - fedora-flathub-remote
-      - fedora-chromium-config
   - type: default-flatpaks
     notify: true
     system:
       install:
         - org.mozilla.firefox
-        - org.gnome.Loupe
         - com.hoptodesk.HopToDesk
-        - org.gnome.Calculator
         - org.onlyoffice.desktopeditors
-        - org.gnome.clocks
         - org.gnome.Papers
-        - org.gnome.font-viewer
-        - org.gnome.Calendar
-        - org.gnome.Characters
       remove:
         - org.gnome.eog
+        - org.gnome.Evince
     user: {}
   - type: script
     snippets:
