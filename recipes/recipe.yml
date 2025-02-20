@@ -17,13 +17,14 @@ modules:
     remove:
       - firefox
       - firefox-langpacks
+      - htop
+      - nvtop
   - type: default-flatpaks
     notify: true
     system:
       install:
         - org.mozilla.firefox
         - org.gnome.Loupe
-        - com.github.jkotra.eovpn
         - com.hoptodesk.HopToDesk
       remove:
         - org.gnome.eog
