@@ -2,7 +2,7 @@
 Version=1.0
 Name=Linphone
 Comment=Llamadas SIP
-Exec=/usr/libexec/linphone.AppImage — no-sandbox
+Exec=/usr/libexec/linphone.AppImage --no-sandbox
 Icon=/usr/share/icons/linphone.png
 Terminal=false
 Type=Application
