@@ -26,7 +26,7 @@ modules:
         - org.mozilla.firefox
         - org.gnome.Loupe
         - com.hoptodesk.HopToDesk
-        - org.gnome.calculator
+        - org.gnome.Calculator
         - org.onlyoffice.desktopeditors
         - org.gnome.clocks
         - org.gnome.Papers
