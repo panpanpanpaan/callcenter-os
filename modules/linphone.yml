@@ -1,0 +1,3 @@
+type: script
+snippets:
+  - "curl https://download.linphone.org/releases/linux/app/Linphone-5.2.6.AppImage > /usr/libexec/linphone.AppImage"
