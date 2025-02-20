@@ -32,7 +32,7 @@ modules:
         - org.gnome.Calendar
         - org.gnome.Characters
         - org.gnome.Calculator
-        - org.gnome.Clocks
+        - org.gnome.clocks
       remove:
         - org.gnome.eog
         - org.gnome.Evince
