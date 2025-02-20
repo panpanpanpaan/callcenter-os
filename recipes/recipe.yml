@@ -24,7 +24,6 @@ modules:
       - fedora-logos
       - fedora-flathub-remote
       - fedora-chromium-config
-      - gnome-shell-extension-background-logo
   - type: default-flatpaks
     notify: true
     system:
