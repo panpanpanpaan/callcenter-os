@@ -17,6 +17,8 @@ modules:
     remove:
       - firefox
       - firefox-langpacks
+      - yelp
+      - gnome-tour
   - type: default-flatpaks
     notify: true
     system:
@@ -25,6 +27,12 @@ modules:
         - com.hoptodesk.HopToDesk
         - org.onlyoffice.desktopeditors
         - org.gnome.Papers
+        - org.gnome.Loupe
+        - org.gnome.font-viewer
+        - org.gnome.Calendar
+        - org.gnome.Characters
+        - org.gnome.Calculator
+        - org.gnome.Clocks
       remove:
         - org.gnome.eog
         - org.gnome.Evince
