@@ -26,6 +26,13 @@ modules:
         - org.mozilla.firefox
         - org.gnome.Loupe
         - com.hoptodesk.HopToDesk
+        - org.gnome.calculator
+        - org.onlyoffice.desktopeditors
+        - org.gnome.clocks
+        - org.gnome.Papers
+        - org.gnome.font-viewer
+        - org.gnome.Calendar
+        - org.gnome.Characters
       remove:
         - org.gnome.eog
     user: {}
