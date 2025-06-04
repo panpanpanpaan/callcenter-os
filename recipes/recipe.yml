@@ -46,4 +46,6 @@ modules:
         https://download.linphone.org/releases/linux/app/Linphone-5.2.6.AppImage
         > /usr/libexec/linphone.AppImage
       - chmod +x /usr/libexec/linphone.AppImage
+      - chmod +x /etc/clamav/detected.sh
+      - sudo systemctl enable clamav-onacc.service
   - type: signing
