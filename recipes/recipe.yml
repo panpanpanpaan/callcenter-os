@@ -47,5 +47,5 @@ modules:
         > /usr/libexec/linphone.AppImage
       - chmod +x /usr/libexec/linphone.AppImage
       - chmod +x /etc/clamav/detected.sh
-      - sudo systemctl enable clamav-onacc.service
+      - systemctl enable clamav-onacc.service
   - type: signing
