@@ -2,7 +2,7 @@
 name: callcenter-os
 description: This is my personal OS image.
 base-image: ghcr.io/aguslr/bluevanilla
-image-version: 42
+image-version: latest
 modules:
   - type: files
     files:
