@@ -2,7 +2,7 @@
 name: callcenter-os
 description: This is my personal OS image.
 base-image: ghcr.io/aguslr/bluevanilla
-image-version: 41
+image-version: 42
 modules:
   - type: files
     files:
@@ -14,6 +14,9 @@ modules:
     install:
       - micro
       - starship
+      - clamav
+      - clamav-update
+      - clamd
     remove:
       - firefox
       - firefox-langpacks
