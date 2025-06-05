@@ -1,0 +1,7 @@
+# /etc/systemd/system/clamav-scan.service
+[Unit]
+Description=Escaneo de virus con ClamAV
+
+[Service]
+Type=oneshot
+ExecStart=/etc/clamav/detected.sh
