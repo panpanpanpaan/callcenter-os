@@ -48,6 +48,6 @@ modules:
       - chmod +x /usr/libexec/linphone.AppImage
       - chmod +x /etc/clamav/detected.sh
       - systemctl daemon-reload
-      - systemctl enable --now clamav-scan.timer
+      - systemctl enable clamav-scan.timer
       
   - type: signing
