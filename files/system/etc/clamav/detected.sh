@@ -11,7 +11,7 @@ echo "Ejecutando escaneo en $(date)" >> "$LOG"
 notify-send -i system-run "Escaneo de virus iniciado" "Iniciando escaneo en $TARGET..."
 
 # Escanear con ClamAV
-sudo clamscan --bell -i -r "$HOME" -l "$LOG" > "$ARCHIVO_RESUMEN"
+clamscan --bell -i -r "$HOME" -l "$LOG" > "$ARCHIVO_RESUMEN"
 
 ESTADO_ESCANEO="$?"
 RESUMEN_INFECCIONES=$(grep "Infected" "$ARCHIVO_RESUMEN")
