@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Kaspersky Virus Removal Tool
-GenericName=Virus Removal Tool
-Type=Application
-Exec=/etc/karspersky/karspersky.sh %u
-TryExec=/etc/karspersky/karspersky.sh
-Icon=/usr/share/icons/karspersky.png
-Terminal=false
