@@ -1,0 +1,11 @@
+# /etc/systemd/system/clamav-scan.timer
+[Unit]
+Description=Ejecutar escaneo ClamAV cada dos hora
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=2h
+Persistent=true
+
+[Install]
+WantedBy=timers.target
