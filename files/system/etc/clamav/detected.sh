@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export LOG= "$HOME/log/scan.log"
+export LOG=$HOME/log/scan.log
 export TARGET="/"
 export SUMMARY_FILE=`mktemp`
 
