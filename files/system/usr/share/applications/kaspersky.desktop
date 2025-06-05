@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Kaspersky Virus Removal Tool
+GenericName=Virus Removal Tool
+Type=Application
+Exec=/usr/libexec/kvrt.run %u
+TryExec=/usr/libexec/kvrt.run
+Icon=/usr/share/icons/linphone.png
+Terminal=false
