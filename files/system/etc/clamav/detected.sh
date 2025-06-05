@@ -1,40 +1,28 @@
 #!/bin/bash
 
-export LOG=$HOME/log/scan.log
-export TARGET="/"
-export SUMMARY_FILE=`mktemp`
+export LOG="$HOME/log/scan.log"
+export TARGET="$HOME"
+export ARCHIVO_RESUMEN=$(mktemp)
 
-export SCAN_STATUS
-export INFECTED_SUMMARY
-export XUSERS
+echo "------------ INICIO DEL ESCANEO ------------" >> "$LOG"
+echo "Ejecutando escaneo en $(date)" >> "$LOG"
 
-echo "------------ SCAN START ------------" >> "$LOG"
-echo "Running scan on `date`" >> "$LOG"
+# Notificación de inicio
+notify-send -i system-run "Escaneo de virus iniciado" "Iniciando escaneo en $TARGET..."
 
-sudo clamdscan --log "$LOG" --infected --multiscan --fdpass "$TARGET" > "$SUMMARY_FILE"
+# Escanear con ClamAV
+sudo clamscan --bell -i -r "$HOME" -l "$LOG" > "$ARCHIVO_RESUMEN"
 
-SCAN_STATUS="$?"
-INFECTED_SUMMARY=`cat $SUMMARY_FILE | grep Infected`
-rm "$SUMMARY_FILE"
+ESTADO_ESCANEO="$?"
+RESUMEN_INFECCIONES=$(grep "Infected" "$ARCHIVO_RESUMEN")
+rm "$ARCHIVO_RESUMEN"
 
-if [[ "$SCAN_STATUS" -ne "0" ]] ; then
-
-  # Send the alert to systemd logger if exist
-  if [[ -n $(command -v systemd-cat) ]] ; then
-    echo "Virus signature found - $INFECTED_SUMMARY" | /usr/bin/systemd-cat -t clamav -p emerg
+if [[ "$ESTADO_ESCANEO" -ne "0" ]]; then
+  # Si se encontraron virus
+  if command -v systemd-cat &>/dev/null ; then
+    echo "Firma(s) de virus encontrada(s) - $RESUMEN_INFECCIONES" | systemd-cat -t clamav -p emerg
   fi
-
-  # Send an alert to all graphical users.
-  XUSERS=($(who|awk '{print $1$NF}'|sort -u))
-  for XUSER in $XUSERS; do
-    NAME=(${XUSER/(/ })
-    DISPLAY=${NAME[1]/)/}
-    DBUS_ADDRESS=unix:path=/run/user/$(id -u ${NAME[0]})/bus
-    echo "run $NAME - $DISPLAY - $DBUS_ADDRESS -" >> /tmp/testlog
-    /usr/bin/sudo -u ${NAME[0]} DISPLAY=${DISPLAY} \
-      DBUS_SESSION_BUS_ADDRESS=${DBUS_ADDRESS} \
-      PATH=${PATH} \
-      /usr/bin/notify-send -i security-low "Virus signature(s) found" "$INFECTED_SUMMARY"
-  done
-
+  notify-send -i dialog-error "¡Virus encontrado!" "$RESUMEN_INFECCIONES"
+else
+  notify-send -i dialog-information "Escaneo completado" "No se encontraron virus en $TARGET"
 fi
