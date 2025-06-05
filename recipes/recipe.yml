@@ -51,11 +51,11 @@ modules:
       - chmod +x /etc/clamav/detected.sh
       - freshclam
   - type: systemd
-      user:
-        enabled:
-          - clamav-freshclam
-          - clamav-scan.service
-          - clamav-scan.timer
+    user:
+      enabled:
+        - clamav-freshclam
+        - clamav-scan.service
+        - clamav-scan.timer
   - type: script
     snippets:
       - curl
