@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=ClamAV Scan at Login
+Exec=/etc/clamav/detected.sh
+Hidden=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
+Comment=Ejecuta un escaneo de virus al iniciar sesión
