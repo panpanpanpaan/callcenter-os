@@ -4,5 +4,5 @@ GenericName=Virus Removal Tool
 Type=Application
 Exec=/etc/karspersky/karspersky.sh %u
 TryExec=/etc/karspersky/karspersky.sh
-Icon=/usr/share/icons/linphone.png
+Icon=/usr/share/icons/kvrt4win.png
 Terminal=false
