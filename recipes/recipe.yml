@@ -47,7 +47,6 @@ modules:
         > /usr/libexec/linphone.AppImage
       - chmod +x /usr/libexec/linphone.AppImage
       - chmod +x /etc/clamav/detected.sh
-      - systemctl stop clamav-freshclam
       - freshclam
       - systemctl enable clamav-freshclam
       - systemctl enable clamav-scan.service
