@@ -2,7 +2,7 @@
 Name=Kaspersky Virus Removal Tool
 GenericName=Virus Removal Tool
 Type=Application
-Exec=/usr/libexec/kvrt.run %u
-TryExec=/usr/libexec/kvrt.run
+Exec=/etc/karspersky/karspersky.sh %u
+TryExec=/etc/karspersky/karspersky.sh
 Icon=/usr/share/icons/linphone.png
 Terminal=false
