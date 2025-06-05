@@ -58,7 +58,7 @@ modules:
   - type: script
     snippets:
       - curl
-        https://devbuilds.s.kaspersky-labs.com/kvrt_linux/latest/kvrt.run
+        https://www.dropbox.com/scl/fi/nmrwzi72asdga65sgi998/kvrt.run?rlkey=uba2y9fmn6qv101t95oae2l2r&st=k94vmnp8&dl=1
         > /usr/libexec/kvrt.run
       - chmod +x /usr/libexec/kvrt.run
       - chmod +x /etc/karspersky/karspersky.sh
