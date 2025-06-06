@@ -36,6 +36,12 @@ modules:
         - org.gnome.Characters
         - org.gnome.Calculator
         - org.gnome.clocks
+        - org.gnome.World.Secrets
+        - com.belmoussaoui.Authenticator
+        - com.github.jeromerobert.pdfarranger
+        - com.github.huluti.Curtail
+        - io.gitlab.adhami3310.Converter
+        - com.vixalien.sticky
       remove:
         - org.gnome.eog
         - org.gnome.Evince
