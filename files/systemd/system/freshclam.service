@@ -1,0 +1,11 @@
+[Unit]
+Description=ClamAV Freshclam Service
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/freshclam --quiet
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target
