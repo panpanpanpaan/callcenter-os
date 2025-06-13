@@ -67,9 +67,6 @@ modules:
     snippets:
       - chmod +x /etc/clamav/detected.sh
   - type: systemd
-    system:
-      enabled:
-        - freshclam.service
     user:
       enabled:
         - clamav-scan.service
