@@ -1,7 +1,7 @@
 ---
 name: callcenter-os
 description: This is my personal OS image.
-base-image: ghcr.io/aguslr/bluevanilla
+base-image: ghcr.io/ublue-os/silverblue-main
 image-version: latest
 modules:
   - type: files
@@ -17,11 +17,20 @@ modules:
       - clamav
       - clamav-update
       - clamd
+      - distrobox
+      - toolbox
+      - just
+      - podman
     remove:
       - firefox
       - firefox-langpacks
       - yelp
       - gnome-tour
+      - fedora-logos
+      - fedora-flathub-remote
+      - fedora-chromium-config
+      - gnome-classic-session
+      - gnome-shell-extension-background-logo
   - type: default-flatpaks
     notify: true
     system:
