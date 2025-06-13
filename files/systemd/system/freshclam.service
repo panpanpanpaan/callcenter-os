@@ -5,8 +5,8 @@ After=network.target
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/freshclam --quiet
-User=clamav
-Group=clamav
+User=root
+Group=root
 RemainAfterExit=true
 
 [Install]
