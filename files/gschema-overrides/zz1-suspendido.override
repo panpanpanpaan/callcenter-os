@@ -1,0 +1,6 @@
+[org.gnome.settings-daemon.plugins.power]
+sleep-inactive-ac-timeout=180
+sleep-inactive-battery-timeout=180
+
+[org.gnome.desktop.session]
+idle-delay=60
