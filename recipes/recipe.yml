@@ -74,5 +74,5 @@ modules:
         - clamav-scan.timer
   - type: gschema-overrides
     include:
-      - zz1-suspendido.override
+      - zz1-suspendido.gschema.override
   - type: signing
