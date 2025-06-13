@@ -33,6 +33,7 @@ modules:
       - gnome-shell-extension-background-logo
       - htop
       - nvtop
+      - malcontent
   - type: default-flatpaks
     notify: true
     system:
