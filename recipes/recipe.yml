@@ -66,6 +66,8 @@ modules:
   - type: script
     snippets:
       - chmod +x /etc/clamav/detected.sh
+      - mkdir /var/lib/clamav
+      - chmod +x /var/lib/clamav
       - freshclam
   - type: systemd
     system:
