@@ -53,6 +53,7 @@ modules:
         - com.github.huluti.Curtail
         - io.gitlab.adhami3310.Converter
         - com.vixalien.sticky
+        - com.rtosta.zapzap
       remove:
         - org.gnome.eog
         - org.gnome.Evince
