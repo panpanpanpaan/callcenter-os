@@ -33,8 +33,11 @@ modules:
       - htop
       - nvtop
   - type: default-flatpaks
-    notify: true
-    system:
+  configurations:
+    - notify: true
+      scope: system
+      repo:
+        title: Flathub (system)
       install:
         - org.mozilla.firefox
         - com.hoptodesk.HopToDesk
