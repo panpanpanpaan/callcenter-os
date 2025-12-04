@@ -57,7 +57,6 @@ modules:
       remove:
         - org.gnome.eog
         - org.gnome.Evince
-    user: {}
   - type: script
     snippets:
       - curl
