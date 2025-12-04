@@ -1,62 +1,30 @@
 ---
 name: callcenter-os
 description: This is my personal OS image.
-base-image: ghcr.io/ublue-os/silverblue-main
+base-image: ghcr.io/alatiera/unblue:latest
 image-version: latest
 modules:
   - type: files
     files:
       - source: system
         destination: /
-  - type: rpm-ostree
-    repos:
-      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+  - type: rpm
     install:
-      - micro
-      - starship
       - clamav
       - clamav-update
       - clamd
-      - distrobox
-      - toolbox
-      - just
-      - podman
-    remove:
-      - firefox
-      - firefox-langpacks
-      - yelp
-      - gnome-tour
-      - fedora-logos
-      - fedora-chromium-config
-      - gnome-classic-session
-      - gnome-shell-extension-background-logo
-      - htop
-      - nvtop
   - type: default-flatpaks
     configurations:
     - notify: true
       scope: system
       install:
-        - org.mozilla.firefox
         - com.hoptodesk.HopToDesk
         - org.onlyoffice.desktopeditors
-        - org.gnome.Papers
-        - org.gnome.Loupe
-        - org.gnome.font-viewer
-        - org.gnome.Calendar
-        - org.gnome.Characters
-        - org.gnome.Calculator
-        - org.gnome.clocks
-        - org.gnome.World.Secrets
-        - com.belmoussaoui.Authenticator
         - com.github.jeromerobert.pdfarranger
         - com.github.huluti.Curtail
         - io.gitlab.adhami3310.Converter
         - com.vixalien.sticky
         - com.rtosta.zapzap
-      remove:
-        - org.gnome.eog
-        - org.gnome.Evince
   - type: script
     snippets:
       - curl
