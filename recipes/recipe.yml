@@ -1,4 +1,5 @@
 ---
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 name: callcenter-os
 description: This is my personal OS image.
 base-image: ghcr.io/alatiera/unblue:latest
@@ -8,7 +9,7 @@ modules:
     files:
       - source: system
         destination: /
-  - type: rpm
+  - type: dnf
     install:
       packages:
       - clamav
