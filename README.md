@@ -13,7 +13,7 @@ To rebase an existing atomic Fedora installation to the latest build:
 
 - First rebase to the unsigned image, to get the proper signing keys and policies installed:
   ```
-  sudo bootc switch ghcr.io/blakyrin/callcenter-os:latest
+  sudo bootc switch ghcr.io/panpanpanpaan/callcenter-os:latest
   ```
 - Reboot again to complete the installation
   ```
