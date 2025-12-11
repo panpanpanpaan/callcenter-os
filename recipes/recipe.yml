@@ -3,7 +3,7 @@
 name: callcenter-os
 description: This is my personal OS image.
 base-image: ghcr.io/alatiera/unblue
-image-version: latest
+image-version: 42
 modules:
   - type: os-release
     properties:
