@@ -5,6 +5,11 @@ description: This is my personal OS image.
 base-image: ghcr.io/alatiera/unblue
 image-version: latest
 modules:
+  - type: os-release
+    properties:
+      ID: callcenter-os
+      NAME: CallCenter
+      PRETTY_NAME: CallCenter OS
   - type: files
     files:
       - source: system
