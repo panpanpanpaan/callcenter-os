@@ -41,11 +41,6 @@ modules:
   - type: script
     snippets:
       - chmod +x /etc/clamav/detected.sh
-  - type: systemd
-    user:
-      enabled:
-        - clamav-scan.service
-        - clamav-scan.timer
   - type: gschema-overrides
     include:
       - zz1-suspendido.gschema.override
