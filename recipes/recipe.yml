@@ -25,6 +25,7 @@ modules:
     - notify: true
       scope: system
       install:
+        - org.mozilla.firefox
         - com.hoptodesk.HopToDesk
         - com.collaboraoffice.Office
         - com.github.jeromerobert.pdfarranger
